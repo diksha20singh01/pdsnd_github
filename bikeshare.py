@@ -7,8 +7,10 @@ import datetime
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
 #define the list of values for month against which the input can be verified
 MONTH_DATA =['all','january','february','march','april','may','june']
+
 #define the list of values for day against which the input can be verified
 DAY_DATA =['all','monday','tuesday','wednesday','thursday','friday','saturday','sunday']
 
@@ -46,6 +48,7 @@ def get_filters():
 
 def load_data(city, month, day):
     """
+
     Loads data for the specified city and filters by month and day if applicable.
 
     Args:
@@ -55,7 +58,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-# load data file into a dataframe
+   #load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
    
     # convert the Start Time column to datetime
@@ -109,7 +112,8 @@ def time_stats(df):
 
 
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
+    """Displays statistics on the most popular stations and trip.
+       The most common trip would include the combination of start and end station"""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
@@ -161,7 +165,10 @@ def trip_duration_stats(df):
 
 
 def user_stats(df,city):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bikeshare users.
+	This method takes dataframe and city as input . 
+	Since gender and birth year columns are not present in the washington.csv file, we need to skip few steps
+	"""
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
@@ -183,7 +190,8 @@ def user_stats(df,city):
 
 def raw_data_display(df):
     """ Displays user data depending upon the input from user. 
-    Initially it displays first 5 rows and then prompts user if the user wants to see next 5 rows """
+    Initially it displays first 5 rows and then prompts user if the user wants to see next 5 rows.
+    It continues till the user inputs no """
     
     print('\n Displaying Raw Data...\n')
     start_time = time.time()
