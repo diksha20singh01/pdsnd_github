@@ -48,6 +48,7 @@ def get_filters():
 
 def load_data(city, month, day):
     """
+
     Loads data for the specified city and filters by month and day if applicable.
 
     Args:
@@ -188,7 +189,8 @@ def user_stats(df,city):
 
 def raw_data_display(df):
     """ Displays user data depending upon the input from user. 
-    Initially it displays first 5 rows and then prompts user if the user wants to see next 5 rows """
+    Initially it displays first 5 rows and then prompts user if the user wants to see next 5 rows.
+    It continues till the user inputs no """
     
     print('\n Displaying Raw Data...\n')
     start_time = time.time()
