@@ -7,8 +7,10 @@ import datetime
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
 #define the list of values for month against which the input can be verified
 MONTH_DATA =['all','january','february','march','april','may','june']
+
 #define the list of values for day against which the input can be verified
 DAY_DATA =['all','monday','tuesday','wednesday','thursday','friday','saturday','sunday']
 
@@ -55,7 +57,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-# load data file into a dataframe
+   #load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
    
     # convert the Start Time column to datetime
@@ -161,7 +163,10 @@ def trip_duration_stats(df):
 
 
 def user_stats(df,city):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bikeshare users.
+	This method takes dataframe and city as input . 
+	Since gender and birth year columns are not present in the washington.csv file, we need to skip few steps
+	"""
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
