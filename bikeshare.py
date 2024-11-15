@@ -134,7 +134,7 @@ def station_stats(df):
     print('-'*40)
 
 def convert_seconds(seconds):
-    """This function converts the seconds into hour mins and seconds"""
+    """This function converts the seconds into hour mins and seconds for better readability"""
     seconds = seconds % (24 * 3600)
     hour = seconds // 3600
     seconds %= 3600
