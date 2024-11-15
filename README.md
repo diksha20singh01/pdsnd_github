@@ -10,9 +10,20 @@ Bikeshare US Project
 Bikeshare Projects depicts the different statistics for the bicycle sharing system in US .
 There are different statistics that are calculated to help analyze the data. 
 1) Popular times of travel
+	- Most common month
+	- Most common day of week 
+	= Most common hour of day
 2) Popular stations and trips
+	- Most common start station 
+	- Most common end station
+	- Most common trip from start to end
 3) Trip Duration
+	- Total travel time 
+	- Average Travel Time
 4) User Info
+	- Counts of each user type
+	- Counts of each gender
+	- earliest, most recent and most common birth year 
 
 ### Files used
 washington.csv
