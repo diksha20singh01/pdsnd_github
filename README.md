@@ -28,6 +28,8 @@ There are different statistics that are calculated to help analyze the data.
 	- Counts of each gender
 	- earliest, most recent and most common birth year 
 
+There are few helper functions created to help the flow of code. 
+The project also asks if the user wants to see the raw data .
 
 
 ### Files used
