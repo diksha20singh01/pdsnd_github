@@ -8,6 +8,9 @@ Bikeshare US Project
 
 ### Description
 Bikeshare Projects depicts the different statistics for the bicycle sharing system in US .
+This prject takes user input of city , month and day to slice the dataframe. 
+the chosen city helps the user to open teh file associated with the city and analyze further.
+
 There are different statistics that are calculated to help analyze the data. 
 1) Popular times of travel
 	- Most common month
@@ -24,6 +27,8 @@ There are different statistics that are calculated to help analyze the data.
 	- Counts of each user type
 	- Counts of each gender
 	- earliest, most recent and most common birth year 
+
+
 
 ### Files used
 washington.csv
